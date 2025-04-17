@@ -15,6 +15,7 @@ const FilterInput = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      autoCapitalize="none"
       className="w-full p-2 mb-4 border border-black px-6 ring-0 focus-within:outline-0"
     />
   );

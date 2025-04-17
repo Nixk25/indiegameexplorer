@@ -41,7 +41,7 @@ const GamesPage = () => {
       setDebouncedSearch(search);
       setDebouncedGenres(genres);
       setDebouncedTags(tags);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [search, genres, tags]);
@@ -63,7 +63,6 @@ const GamesPage = () => {
       if (debouncedSearch) url.searchParams.set("search", debouncedSearch);
       if (debouncedGenres) url.searchParams.set("genres", debouncedGenres);
       if (debouncedTags) url.searchParams.set("tags", debouncedTags);
-
       const res = await fetch(url.toString());
       if (!res.ok) throw new Error("Network response was not ok");
       return res.json();
